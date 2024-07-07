@@ -1,0 +1,44 @@
+# Python
+*.pyc
+__pycache__/
+
+# Django
+*.log
+db.sqlite3
+/staticfiles/
+/mediafiles/
+
+# React
+node_modules/
+/build/
+/dist/
+/.eslintcache
+
+# Environment variables
+.env
+.venv/
+venv/
+ENV/
+
+# Virtualenv
+*.env.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Yarn
+.yarn/*
+.pnp.*
+
+# npm
+package-lock.json
+
+# pipenv
+Pipfile.lock
