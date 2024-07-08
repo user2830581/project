@@ -1,6 +1,9 @@
 # Python
 *.pyc
 __pycache__/
+*.pyo
+*.pyd
+*.log
 
 # Django
 *.log
@@ -10,6 +13,7 @@ db.sqlite3
 
 # React
 node_modules/
+npm-debug.log
 /build/
 /dist/
 /.eslintcache

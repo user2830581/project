@@ -1,12 +1,10 @@
 import React from 'react';
-/*import picture1 from ;
-import picture2 from;
-import picture3 from;
-*/
+//import { Link } from 'react-router-dom';
+import '../styles/Home.css';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="home-container">
       Home! I am home!
     </div>
   );

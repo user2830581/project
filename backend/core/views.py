@@ -7,8 +7,10 @@ from .models import User
 
 
 class UserView(viewsets.ModelViewSet):
-    serializer_class = UserSerializer
+    # define queryset
     queryset = User.objects.all()
+    # serializer to be used
+    serializer_class = UserSerializer
 
 
 def index(request):
