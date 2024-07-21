@@ -1,8 +1,10 @@
 /* Global Section Styles */
-section, header {
-  min-height: 100vh; /* Set each section equal to viewport height */
-  display: flex;
+
+
+header{
+  min-height:100%; /* To account for nav taking up space */
 }
+
 
 .section-divider {
   border: 1px solid #35540d;
@@ -26,13 +28,13 @@ section, header {
 }
 
 .landing-section button {
-  margin-bottom: auto;
+  margin-bottom: 6em;
   background-color: #f66538;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
   padding: 0.5em 2.5em;
-  font-size: 2em;
+  font-size: 1.7rem;
   text-shadow: 0px 0px 4px #5a1507;
   color: #ffffff;
 }
@@ -40,8 +42,8 @@ section, header {
 .landing-section h1 {
   background-color: transparent;
   font-weight: 700;
-  font-size: 5em;
-  margin-top: auto;
+  font-size: 4rem;
+  margin-top: 5em;
   color: #ffffff;
   text-shadow: 0px 0px 20px black;
 }
@@ -70,21 +72,21 @@ section, header {
 
 .figure h1 {
   margin: auto auto 0.35em;
-  font-size: 5em;
+  font-size: 4rem;
   color: rgba(201, 41, 41, 0.8);
   text-shadow: 0px 4px 4px #fff, 0 0 0 #000, 0px 4px 4px #fff;
 }
 
 .figure p {
   color: #5d5d5d;
-  font-size: 1.75em;
+  font-size: 1.4rem;
   line-height: 115%;
   margin: auto 3em auto;
 }
 
 .carbon-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 5em 12em 5em;
   gap: 6em;
 }
@@ -92,8 +94,9 @@ section, header {
 .carbon-sub-sections {
   display: flex;
   flex: 2; /* Text takes up 2/3 of the space */
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
+  max-width: 1200px;
 }
 
 
@@ -112,12 +115,12 @@ section, header {
 }
 
 .carbon-text p {
-  font-size: 1.5em;
+  font-size: 1.2rem;
   line-height: 165%;
 }
 
 .carbon-text h3 {
-  font-size: 2.5em;
+  font-size: 2rem;
   letter-spacing: 0.04em;
   line-height: 80%;
 }
@@ -128,8 +131,9 @@ section, header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin: auto 3em 2em;
+  justify-content: flex-start;
+  gap:4em;
+  margin: 1em 3em 4em;
 }
 
 .features-section-title {
@@ -140,7 +144,7 @@ section, header {
 }
 
 .features-section-title h2 {
-  font-size: 3.5em;
+  font-size: 3rem;
   line-height: 56%;
   letter-spacing: 1px;
 }
@@ -148,13 +152,14 @@ section, header {
 .features-section-title p {
   margin-top: 0;
   color: #5d5d5d;
-  font-size: 1.5em;
+  font-size: 1.2rem;
   line-height: 165%;
 }
 
 .features-list{
   display: flex;
   justify-content: center;
+  margin: 0 10em 0;
   gap:4em;
 }
 
@@ -184,14 +189,14 @@ section, header {
 }
 
 .feature h4 {
-  font-size: 2.5em;
+  font-size: 2.2rem;
   line-height: 95%;
   letter-spacing: 0.6px;
 }
 
 .feature p {
   color: #333;
-  font-size: 1.4em;
+  font-size: 1.2rem;
   line-height: 155%;
   letter-spacing: 0.36px;
   margin: 0em 2.5em 1em;
@@ -206,7 +211,7 @@ footer {
   flex-direction: column;
   text-align: center;
   margin: 1em;
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 
 footer p {
@@ -221,8 +226,6 @@ footer p {
 
 
 /* Media queries */
-
-
 @media (max-width: 1450px) {
   .figures-section {
     flex-direction: column;
@@ -239,10 +242,8 @@ footer p {
     flex-direction: column;
   }
 
-}
-
-@media (max-width:2000px){
   .carbon-img{
     display: none;
   }
+
 }
