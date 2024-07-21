@@ -1,37 +1,39 @@
 import React from "react";
-import '../styles/Navbar.css';
+import "../styles/Navbar.css";
+import { IoLeaf } from "react-icons/io5";
+import { Link, NavLink } from "react-router-dom";
+
 
 // navbar-l is for logo
 // navbar-c is for options
-// navbar-r is for log in/log out
+// navbar-r is for log in/log out button
 
 const NavBar = () => {
-    return(
-            <nav className="navbar">
-                <div className="navbar-l">
-                    <a href="/" className="logo">Carbon24</a>
-                </div>
-                <div className="navbar-c">
-                    <ul className="nav-links">
-                        <li>
-                            <a href="/dashboard">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="/upload">Upload</a>
-                        </li>
-                        <li>
-                            <a href="/settings">Settings</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="navbar-r">
-                    <a href="/logout">Log out</a>
-                </div>
-
-            </nav>
-    );
-}
+  return (
+    <nav className="navbar">
+      <div className="navbar-l">
+        <Link to="/" className="logo-name">
+          <IoLeaf className="logo-icon" /> Carbon24
+        </Link>
+      </div>
+      <div className="navbar-c">
+        <ul className="nav-links">
+          <li>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink to="/upload">Upload</NavLink>
+          </li>
+          <li>
+            <NavLink to="/settings">Settings</NavLink>
+          </li>
+        </ul>
+      </div>
+      <div className="navbar-r">
+        <a href="/logout">Log out</a>
+      </div>
+    </nav>
+  );
+};
 
 export default NavBar;
-
-
