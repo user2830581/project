@@ -6,7 +6,7 @@ import "./index.css";
 import Home from "./components/HomePage";
 import Login from "./components/LoginPage";
 import Register from "./components/RegisterPage";
-import NavBar from "./components/Nav";
+import Nav from "./components/Nav";
 import Dashboard from "./components/DashboardPage";
 import Settings from "./components/SettingsPage";
 import Upload from "./components/UploadPage";
@@ -15,7 +15,7 @@ import Upload from "./components/UploadPage";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <Nav />
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="/login" element={<Login />} />
