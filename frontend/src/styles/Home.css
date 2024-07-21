@@ -1,3 +1,218 @@
-.home-container {
-    background-color: orange;
+/**/
+
+section {
+  min-height: 100vh;
+  display: flex;
+}
+
+.section-divider {
+  border: 1px solid #35540d;
+  margin: auto;
+}
+
+/**/
+
+.landing-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/maxi-gimenez-aNcOeQLb_kA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5em;
+  gap: 5em;
+}
+
+.landing-section button {
+  margin-bottom: auto;
+  background-color: #f66538;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 0.5em 2.5em;
+  font-size: 2em;
+  text-shadow: 0px 0px 4px #5a1507;
+  color: #ffffff;
+}
+
+.landing-section h1 {
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 5em;
+  margin-top: auto;
+  color: #ffffff;
+  text-shadow: 0px 0px 20px black;
+}
+
+/**/
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.figures-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 5em 8em 5em;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1; /* Ensures all figure elements take equal space */
+  max-width: 33%; /* Ensures the maximum width for each figure */
+}
+
+.figure h1 {
+  margin: auto auto 0.35em;
+  font-size: 5em;
+  color: rgba(201, 41, 41, 0.8);
+  text-shadow: 0px 4px 4px #fff, 0 0 0 #000, 0px 4px 4px #fff;
+}
+
+.figure p {
+  color: #5d5d5d;
+  font-size: 1.75em;
+  line-height: 115%;
+  margin: auto 3em auto;
+}
+
+.carbon-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 5em 12em 5em;
+  gap: 6em;
+}
+
+.carbon-sub-sections {
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.carbon-img {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.carbon-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carbon-text p {
+  font-size: 1.5em;
+  line-height: 165%;
+}
+
+.carbon-text h3 {
+  font-size: 2.5em;
+  letter-spacing: 0.04em;
+  line-height: 80%;
+}
+
+/**/
+
+.features-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.features-list {
+  margin: 2em 15em auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 7em;
+}
+
+.feature {
+  background-color: #b3d385;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(23, 41, 6, 0.76);
+  padding: 0 3em 3em;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.feature-title {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.feature-title img {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+.features-title {
+  margin-top: 2em;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 3.5em;
+  line-height: 56%;
+  letter-spacing: 1px;
+}
+
+.features-title p {
+  margin-top: 0;
+  color: #5d5d5d;
+  font-size: 1.5em;
+  line-height: 165%;
+}
+
+h4 {
+  font-size: 2.5em;
+  line-height: 95%;
+  letter-spacing: 0.6px;
+}
+
+.feature p {
+  color: #333;
+  font-size: 1.4em;
+  line-height: 155%;
+  letter-spacing: 0.36px;
+}
+
+/**/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+footer p {
+  color: #5d5d5d;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration-line: underline;
+  text-decoration-color: #5d5d5d;
 }
