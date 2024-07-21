@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./styles/Global.css";
+import "./index.css";
 import Home from "./components/HomePage";
 import Login from "./components/LoginPage";
 import Register from "./components/RegisterPage";
