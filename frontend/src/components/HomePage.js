@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Home.css";
+import "../styles/HomePage.css";
 import tree from "../assets/fir-576838_1280.png";
 import trackingIcon from "../assets/icons8-oak-tree-100.png";
 import analysisIcon from "../assets/icons8-loading-sign-100.png";
