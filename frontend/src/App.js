@@ -6,7 +6,7 @@ import "./index.css";
 import Home from "./components/HomePage";
 import Login from "./components/LoginPage";
 import Register from "./components/RegisterPage";
-import NavBar from "./components/NavBar";
+import NavBar from "./componengitts/Nav";
 import Dashboard from "./components/DashboardPage";
 import Settings from "./components/SettingsPage";
 import Upload from "./components/UploadPage";
