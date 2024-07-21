@@ -9,15 +9,20 @@ import monitorIcon from "../assets/icons8-positive-dynamic-100.png";
 const HomePage = () => {
   return (
     <div className="home">
-      <section className="landing-section">
+      {/* Landing Section */}
+      <header className="landing-section">
         <h1>A Tree and Carbon Stock Management System</h1>
         <button type="button">Get Started</button>
-      </section>
+      </header>
 
       <hr className="section-divider" />
 
+      {/* Main Content */} 
+      <main>
+      {/* Info Section */}
       <section className="info-section">
         <div className="figures-section">
+          {/* Figure elements display carbon related statistics and descriptions */}
           <div className="figure">
             <h1>25%</h1>
             <p>
@@ -40,11 +45,14 @@ const HomePage = () => {
             </p>
           </div>
         </div>
+
         <div>
           <hr className="section-divider" />
         </div>
+
         <div className="carbon-section">
           <div className="carbon-sub-sections">
+            {/* Carbon sequestration information */}
             <div className="carbon-text">
               <h3>Carbon Sequestration: What is it?</h3>
               <p>
@@ -90,8 +98,9 @@ const HomePage = () => {
 
       <hr className="section-divider" />
 
+      {/* Features Section */}
       <section className="features-section">
-        <div className="features-title">
+        <div className="features-section-title">
           <h2>How Carbon24 works</h2>
           <p>
             By leveraging tree data, we can give users an intuitive breakdown of
@@ -154,24 +163,42 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      </main>
       <hr className="section-divider" />
+
+
+      {/* Footer */}
       <footer>
         <p className="footer-details">
           This project was made as part of CS4501, a BSc. Computer Science final
           year project.
         </p>
         <p className="footer-links">
-          Background image by
-          <Link to="https://unsplash.com/photos/an-aerial-view-of-a-forest-with-lots-of-trees-aNcOeQLb_kA">
-            {" "}
+          Background image by{' '}
+          <a
+            href="https://unsplash.com/photos/an-aerial-view-of-a-forest-with-lots-of-trees-aNcOeQLb_kA"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Maxi Gimenez
-          </Link>
-          , Tree image by
-          <Link to="https://pixabay.com/vectors/fir-tree-trunk-nature-leaves-576838/">
-            {" "}
+          </a>
+          , Tree image by{' '}
+          <a
+            href="https://pixabay.com/vectors/fir-tree-trunk-nature-leaves-576838/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Pixabay
-          </Link>
-          , Icons by <Link to="https://www.icons8.com">Icons8</Link>.
+          </a>
+          , Icons by{' '}
+          <a
+            href="https://www.icons8.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Icons8
+          </a>
+          .
         </p>
       </footer>
     </div>
