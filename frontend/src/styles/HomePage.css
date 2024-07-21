@@ -1,7 +1,6 @@
-/**/
-
-section {
-  min-height: 100vh;
+/* Global Section Styles */
+section, header {
+  min-height: 100vh; /* Set each section equal to viewport height */
   display: flex;
 }
 
@@ -10,12 +9,11 @@ section {
   margin: auto;
 }
 
-/**/
-
+/*Landing Section Styles*/
 .landing-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/maxi-gimenez-aNcOeQLb_kA-unsplash.jpg");
-  background-size: cover;
+  background-size:cover; /* Image covers entire section */
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
@@ -48,11 +46,10 @@ section {
   text-shadow: 0px 0px 20px black;
 }
 
-/**/
-
+/* Info Section Styles */
 .info-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Content fills section space evenly */
   flex-direction: column;
 }
 
@@ -67,8 +64,8 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  flex: 1; /* Ensures all figure elements take equal space */
-  max-width: 33%; /* Ensures the maximum width for each figure */
+  flex: 1; /* All figures take up equal amount of space */
+  max-width: 33%; /* Maximum width for each figure */
 }
 
 .figure h1 {
@@ -94,21 +91,24 @@ section {
 
 .carbon-sub-sections {
   display: flex;
-  flex: 2;
+  flex: 2; /* Text takes up 2/3 of the space */
   justify-content: space-evenly;
   flex-direction: column;
 }
 
+
+
 .carbon-img {
-  flex: 1;
+  flex: 1; /* Image takes up 1/3 of the space */
   display: flex;
   justify-content: end;
   align-items: end;
 }
 
 .carbon-img img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Image fills up entire width of container */
+  height: auto; /* Image height is proportional to width */
+  min-width: 500px;
 }
 
 .carbon-text p {
@@ -122,67 +122,68 @@ section {
   line-height: 80%;
 }
 
-/**/
 
-.features-section {
+/* Features Section Styles */
+.features-section{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-around;
+  margin: auto 3em 2em;
+}
+
+.features-section-title {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.features-list {
-  margin: 2em 15em auto;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 7em;
-}
-
-.feature {
-  background-color: #b3d385;
-  border-radius: 10px;
-  box-shadow: 0px 0px 4px 0px rgba(23, 41, 6, 0.76);
-  padding: 0 3em 3em;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.feature-title {
-  margin-top: 0.5em;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.feature-title img {
-  width: 40%;
-  height: auto;
-  object-fit: contain;
-}
-
-.features-title {
-  margin-top: 2em;
-  max-width: 650px;
-  display: flex;
-  flex-direction: column;
-}
-
-h2 {
+.features-section-title h2 {
   font-size: 3.5em;
   line-height: 56%;
   letter-spacing: 1px;
 }
 
-.features-title p {
+.features-section-title p {
   margin-top: 0;
   color: #5d5d5d;
   font-size: 1.5em;
   line-height: 165%;
 }
 
-h4 {
+.features-list{
+  display: flex;
+  justify-content: center;
+  gap:4em;
+}
+
+.feature{
+  background-color: #b3d385;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(23, 41, 6, 0.76);
+  padding:2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap:1em;
+  max-width: 450px;
+  min-width: 350px;
+}
+
+.feature-title{
+  display: flex;
+  justify-content: flex-start;
+  align-items:center;
+}
+
+.feature-title img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+.feature h4 {
   font-size: 2.5em;
   line-height: 95%;
   letter-spacing: 0.6px;
@@ -193,13 +194,14 @@ h4 {
   font-size: 1.4em;
   line-height: 155%;
   letter-spacing: 0.36px;
+  margin: 0em 2.5em 1em;
 }
 
-/**/
 
+/* Footer Styles */
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center all footer content */
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -213,6 +215,34 @@ footer p {
 
 .footer-links a {
   color: black;
-  text-decoration-line: underline;
+  text-decoration-line: underline; /* Make sure links stand out */
   text-decoration-color: #5d5d5d;
+}
+
+
+/* Media queries */
+
+
+@media (max-width: 1450px) {
+  .figures-section {
+    flex-direction: column;
+    align-items: center;
+    gap:3em;
+  }
+
+  .figure {
+    max-width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .features-list{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width:2000px){
+  .carbon-img{
+    display: none;
+  }
 }
