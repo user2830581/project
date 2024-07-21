@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Navbar.css";
+import "../styles/Nav.css";
 import { IoLeaf } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 
