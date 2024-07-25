@@ -1,15 +1,19 @@
 .navbar{
+    font-size: 100%;
+    max-width: 3000px;
+      margin: 0 auto; /* Center the container */
+      padding: 0 1em; /* Optional: Add padding to avoid content touching the edges */
     display: flex;
     background-color: transparent;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
+
     padding: 1em;
     gap: 1em;
 
 }
 
- .navbar-c{
+ .center-nav{
     flex:2;
     background-color: transparent;
     text-align: center;
@@ -40,7 +44,7 @@
 
 /*Logo*/
 
-.navbar-l{
+.left-nav{
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -65,7 +69,7 @@
 }
  
 
-.navbar-r{
+.right-nav{
     font-size: 1.25em;
     margin-right: 1em;
 }
