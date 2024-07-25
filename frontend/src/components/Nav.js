@@ -11,12 +11,12 @@ import { Link, NavLink } from "react-router-dom";
 const Nav = ({onLoginClick}) => {
   return (
     <nav className="navbar">
-      <div className="navbar-l">
+      <div className="left-nav">
         <Link to="/" className="logo-name">
           <IoLeaf className="logo-icon" /> Carbon24
         </Link>
       </div>
-      <div className="navbar-c">
+      <div className="center-nav">
         <ul className="nav-links">
           <li>
             <NavLink to="/dashboard">Dashboard</NavLink>
@@ -29,7 +29,7 @@ const Nav = ({onLoginClick}) => {
           </li>
         </ul>
       </div>
-      <div className="navbar-r">
+      <div className="right-nav">
         <button onClick={onLoginClick}>Log in</button>
       </div>
     </nav>
