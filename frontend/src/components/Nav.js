@@ -8,7 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 // navbar-c is for options
 // navbar-r is for log in/log out button
 
-const NavBar = () => {
+const Nav = ({onLoginClick}) => {
   return (
     <nav className="navbar">
       <div className="navbar-l">
@@ -30,10 +30,10 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-r">
-        <a href="/logout">Log out</a>
+        <button onClick={onLoginClick}>Log in</button>
       </div>
     </nav>
   );
 };
 
-export default NavBar;
+export default Nav;
