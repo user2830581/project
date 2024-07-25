@@ -4,7 +4,7 @@ import { useState } from "react";
   Custom React hook to manage login and register modal visbility
 */
 
-export default function useModal() {
+const useModal() {
   // Track which modal is currently active, initally no modal is open
   const [currentModal, setCurrentModal] = useState(false);
 
@@ -18,10 +18,12 @@ export default function useModal() {
     // Boolean check if current modal is set to 'register' or 'login'
     isRegisterModalOpen: currentModal === "register",
     isLoginModalOpen: currentModal === "login",
-    
+
     // Function calls to manage modals visibility
     openRegisterModal: () => openModal("register"),
     openLoginModal: () => openModal("login"),
     closeModal,
   };
 }
+
+export default useModal;
