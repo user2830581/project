@@ -1,0 +1,39 @@
+/* Modal Background Styles */
+.modal {
+  position: fixed;
+  backdrop-filter: blur(2px); /* Blur background while modal is active */
+  background: rgba(32, 32, 32, 0.085); /* Darken background while modal is active*/
+
+  /* Modal takes up entire screen */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Styles */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  background: #FFFFFF;
+  position: relative;
+  padding: 2em;
+  border-radius: 10px;
+  border: 2px solid var(--grey);
+}
+
+
+/* Modal Button Styles */
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--grey);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
