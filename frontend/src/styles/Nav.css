@@ -1,76 +1,82 @@
-.navbar{
-    font-size: 100%;
-    max-width: 3000px;
-      margin: 0 auto; /* Center the container */
-      padding: 0 1em; /* Optional: Add padding to avoid content touching the edges */
-    display: flex;
-    background-color: transparent;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 1em;
-    gap: 1em;
-
+.navbar {
+  max-width: 3000px;
+  margin: 0 auto; /* Center the container */
+  padding: 1em; /* Optional: Add padding to avoid content touching the edges */
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
 }
 
- .center-nav{
-    flex:2;
-    background-color: transparent;
-    text-align: center;
+.center-nav {
+  flex: 1;
+  background-color: transparent;
 }
 
 /*control over immediate children*/
-.nav-links{
-    list-style-type: none;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    gap: 1em;
-    background-color: transparent;
-    font-size: 1.25em;
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  gap: 2em;
+  background-color: transparent;
 }
 
-/*
-.nav-links li, .nav-links li a{
-    padding: 0.5em 1.5em;
-    background-color: transparent;
+.nav-links li a {
+  padding: 0.5em 1em;
 }
 
-.nav-links li a.active{
-    background-color: #D7573B;
-    border-radius: 20px;
-    padding: 0.5em 1.5em;
+.nav-links li .active {
+  background-color: var(--orange);
+  border-radius: 20px;
+  color: #ffffff;
 }
 
 /*Logo*/
 
-.left-nav{
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    margin-left: 1em;
+.left-nav {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  margin-left: 1em;
+}
+
+
+.logo-name {
+  color: #263c09;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.logo-icon {
+  fill: #263c0960;
+  stroke: #263c09;
+  stroke-width: 30px;
+  font-size: 1.25em;
+  margin-right: -0.05em;
+  transform: scaleX(-1);
+  background-color: transparent;
+}
+
+.right-nav {
+  margin-right: 1em;
+}
+
+.right-nav button {
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
 
 }
 
-.logo-name{
-    display: flex; 
-    align-items: center;
-    background-color: transparent;
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.5em;
-    font-weight: 700;
+.center-nav li a, .right-nav button{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #263c09;
 }
-
-.logo-icon{
-    font-size: 1.25em;
-    margin-right: -0.1em;
-    transform: scaleX(-1);
-    background-color: transparent;
-}
- 
-
-.right-nav{
-    font-size: 1.25em;
-    margin-right: 1em;
-}
- 
