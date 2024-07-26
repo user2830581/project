@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/RegisterLoginForm.css";
 
 /**
- * RegisterForm component represents a registration in form for users.
+ * RegisterForm component represents a registration form for users.
  *
  *
  * @component
