@@ -1,0 +1,102 @@
+/* Page Styles */
+.settings-page {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* hr tag styles */
+.settings-divider {
+  border: 1px solid var(--green);
+  margin: 1.5em 0;
+}
+
+/* Section Styles */
+.settings-section {
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settings-section h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.settings-section p {
+  margin: 0.3em 0 2em;
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+/* Form Styles */
+.settings-form-contents {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: #000000;
+  font-size: 0.95rem;
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-field input {
+  border-radius: 10px;
+  padding: 0 1em;
+  border: 1px solid var(--grey);
+  height: 3em;
+  width: 100%;
+}
+
+/* Global Button Styles */
+.settings-page button {
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 0.5em 2.5em;
+    font-size: 1rem;
+  }
+
+/* Specific Button Styles */
+.settings-buttons {
+  display: flex;
+  align-self: flex-end;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.settings-buttons .reset-button {
+  border-color: var(--grey);
+  background-color: transparent;
+  color: var(--grey);
+}
+
+.settings-buttons .submit-button {
+  border-color: var(--orange);
+  background-color: var(--orange);
+  color: #ffffff;
+}
+
+/* Appearance Button Styles */
+.appearance-buttons {
+  display: flex;
+  gap: 2em;
+}
+
+.appearance-buttons button {
+  padding: 0.7em 2.5em;
+  border-color: var(--green);
+  background: var(--green);
+  color: #FFFFFF;
+}
