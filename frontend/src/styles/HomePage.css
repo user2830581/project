@@ -17,7 +17,7 @@ header {
 
 /* Landing Section Styles */
 .landing-section {
-  background-image:linear-gradient(#0c1301e0, #0c130154, #0c1301e0
+  background-image:linear-gradient(#0c1301db, #0c130154 40%
 ),
     url("../assets/maxi-gimenez-aNcOeQLb_kA-unsplash.jpg");
   background-size: cover; /* Image covers entire section */
