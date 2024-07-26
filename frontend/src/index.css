@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Global Variables */
-:root{
-  --orange:#D7573B;
-  --green:#5D7C34;
-  --light-green:#B3D385;
-  --grey:#5D5D5D;
-
+:root {
+  --orange: #d7573b;
+  --green: #5d7c34;
+  --light-green: #b3d385;
+  --grey: #5d5d5d;
 }
+
+
 
 /* Global Styles */
 * {
@@ -37,4 +38,31 @@ code {
 a {
   color: #000000;
   text-decoration: none;
+}
+
+/* Page Title Styles */
+.title {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 1.75em 0em;
+}
+
+.title hr {
+  border: 1px solid var(--green);
+  margin: 0;
+  padding:0;
+}
+
+.title p {
+  color: var(--grey);
+  font-size: 1em;
+}
+
+.title h1 {
+  color: #000000;
+  font-size: 50px;
+  line-height: 55%;
+  padding: 0.2em;
+  margin-bottom: 0.1em;
 }
