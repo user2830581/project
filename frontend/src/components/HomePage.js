@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/HomePage.css";
-import tree from "../assets/fir-576838_1280.png";
+import treeImage from "../assets/fir-576838_1280.png";
 import trackingIcon from "../assets/icons8-oak-tree-100.png";
 import analysisIcon from "../assets/icons8-loading-sign-100.png";
 import monitorIcon from "../assets/icons8-positive-dynamic-100.png";
@@ -8,6 +8,9 @@ import monitorIcon from "../assets/icons8-positive-dynamic-100.png";
 const HomePage = ({ onRegisterClick }) => {
   return (
     <div className="home">
+
+      <hr className="nav-section-divider" />
+
       {/* Landing Section */}
       <header className="landing-section">
         <h1>A Tree and Carbon Stock Management System</h1>
@@ -92,7 +95,7 @@ const HomePage = ({ onRegisterClick }) => {
               </div>
             </div>
             <div className="carbon-img">
-              <img src={tree} alt="Tree icon" />
+              <img src={treeImage} alt="Tree icon" />
             </div>
           </div>
         </section>
@@ -175,6 +178,7 @@ const HomePage = ({ onRegisterClick }) => {
           This project was made as part of CS4501, a BSc. Computer Science final
           year project.
         </p>
+        
         <p className="footer-links">
           Background image by{" "}
           <a
