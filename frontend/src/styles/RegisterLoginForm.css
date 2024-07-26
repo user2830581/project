@@ -7,7 +7,7 @@
 }
 
 /* Form Heading Styles */
-h1 {
+.form-container h1 {
   color: var(--green);
   text-align: center;
   font-size: 2.1rem;
@@ -15,7 +15,7 @@ h1 {
   margin: 0;
 }
 
-p {
+.form-container p {
   color: var(--grey);
   text-align: center;
   font-size: 1.1rem;
