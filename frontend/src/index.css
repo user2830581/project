@@ -40,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+button{
+  cursor: pointer;
+}
+
 /* Page Title Styles */
 .title {
   display: flex;
@@ -56,7 +60,7 @@ a {
 
 .title p {
   color: var(--grey);
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
   margin-bottom:1.5em;
 }
@@ -64,8 +68,8 @@ a {
 .title h1 {
   text-align: center;
   color: #000000;
-  font-weight: 600;
-  font-size: 50px;
+  font-weight: 500;
+  font-size: 2.5rem;
   line-height: 55%;
   padding: 0.2em 0em 0em;
   margin-bottom: 0.1em;
