@@ -1,7 +1,7 @@
 .navbar {
-  max-width: 3000px;
-  margin: 0 auto; /* Center the container */
-  padding: 0.5em; /* Optional: Add padding to avoid content touching the edges */
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
   display: flex;
   background-color: transparent;
   align-items: center;
@@ -9,12 +9,12 @@
   gap: 1em;
 }
 
+/* Main Nav Styles */
 .center-nav {
   flex: 1;
   background-color: transparent;
 }
 
-/*control over immediate children*/
 .nav-links {
   list-style-type: none;
   display: flex;
@@ -24,7 +24,8 @@
   background-color: transparent;
 }
 
-.nav-links li a {
+.nav-links li a,
+.dropdown-toggle {
   padding: 0.5em 1em;
 }
 
@@ -34,8 +35,41 @@
   color: #ffffff;
 }
 
-/*Logo*/
+/* Dropdown Menu Styles */
+.dropdown-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
 
+
+.dropdown-toggle.active {
+  background-color: #cee1b7;
+  border-radius: 5px;
+}
+
+.nav-links.dropdown {
+  display: none;
+  flex-direction: row;
+  width: fit-content;
+  position: absolute;
+  left: 1em;
+  top: 3em;
+  margin: 0 auto;
+  background-color: #cee1b7;
+  padding: 1rem 0;
+  justify-content: flex-start;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.nav-links.dropdown .active {
+  background-color: transparent;
+  color: #263c09;
+  text-decoration: underline;
+}
+
+/* Logo Styles*/
 .left-nav {
   display: flex;
   align-items: center;
@@ -43,16 +77,20 @@
   margin-left: 1em;
 }
 
-
-.logo-name {
-  color: #263c09;
+.logo {
   display: flex;
   align-items: center;
   background-color: transparent;
+  text-decoration: none;
+}
+
+.logo-name {
+  color: #263c09;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
   font-weight: 700;
 }
+
 
 .logo-icon {
   fill: #263c0960;
@@ -64,6 +102,7 @@
   background-color: transparent;
 }
 
+/* Login/Logout Styles */
 .right-nav {
   margin-right: 1em;
 }
@@ -73,11 +112,31 @@
   background-color: transparent;
   font-size: 1rem;
   cursor: pointer;
-
 }
 
-.center-nav li a, .right-nav button{
-    font-size: 1rem;
-    font-weight: 500;
-    color: #263c09;
+.center-nav li a,
+.right-nav button,
+.dropdown-toggle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #263c09;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .logo-name {
+    display: none; /* Remove 'Carbon24' text */
+  }
+
+  .nav-links {
+    display: none; /* Remove center nav items */
+  }
+
+  .nav-links.dropdown {
+    display: flex; /* Add dropdown for center nav items */
+  }
+
+  .dropdown-toggle {
+    display: block;
+  }
 }

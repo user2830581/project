@@ -3,29 +3,39 @@ import "../styles/Nav.css";
 import { IoLeaf } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 
+const Nav = ({ onLoginClick }) => {
 
-// navbar-l is for logo
-// navbar-c is for options
-// navbar-r is for log in/log out button
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
 
-const Nav = ({onLoginClick}) => {
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  }
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  }
+
   return (
     <nav className="navbar">
       <div className="left-nav">
-        <Link to="/" className="logo-name">
-          <IoLeaf className="logo-icon" /> Carbon24
+        <Link to="/" className="logo">
+          <IoLeaf className="logo-icon" />
+          <span className="logo-name">Carbon24</span>
         </Link>
       </div>
       <div className="center-nav">
-        <ul className="nav-links">
+        <button onClick={toggleDropdown} className={`dropdown-toggle ${isDropdownOpen ? "active" : ""}`}>
+          Menu
+        </button>
+        <ul className={`nav-links ${isDropdownOpen ? "dropdown" : ""}`}>
           <li>
-            <NavLink to="/dashboard">Dashboard</NavLink>
+            <NavLink to="/dashboard" onClick={closeDropdown}>Dashboard</NavLink>
           </li>
           <li>
-            <NavLink to="/upload">Upload</NavLink>
+            <NavLink to="/upload" onClick={closeDropdown}>Upload</NavLink>
           </li>
           <li>
-            <NavLink to="/settings">Settings</NavLink>
+            <NavLink to="/settings" onClick={closeDropdown}>Settings</NavLink>
           </li>
         </ul>
       </div>
