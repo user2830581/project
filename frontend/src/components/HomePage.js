@@ -8,7 +8,6 @@ import monitorIcon from "../assets/icons8-positive-dynamic-100.png";
 const HomePage = ({ onRegisterClick }) => {
   return (
     <div className="home">
-
       <hr className="nav-section-divider" />
 
       {/* Landing Section */}
@@ -50,9 +49,7 @@ const HomePage = ({ onRegisterClick }) => {
             </div>
           </div>
 
-          <div>
-            <hr className="section-divider" />
-          </div>
+          <hr className="section-divider" />
 
           <div className="carbon-section">
             <div className="carbon-sub-sections">
@@ -178,7 +175,7 @@ const HomePage = ({ onRegisterClick }) => {
           This project was made as part of CS4501, a BSc. Computer Science final
           year project.
         </p>
-        
+
         <p className="footer-links">
           Background image by{" "}
           <a
