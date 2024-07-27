@@ -1,11 +1,10 @@
-/* Page Styles */
-.settings-page {
-  width: 100%;
-  margin: 0 auto;
+/* Settings Page Styles */
+.settings-page-contents {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
-
 
 /* hr tag styles */
 .settings-divider {
@@ -16,9 +15,6 @@
 /* Section Styles */
 .settings-section {
   margin: 0 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .settings-section h2 {
@@ -36,43 +32,46 @@
 /* Form Styles */
 .settings-form-contents {
   display: flex;
-  gap: 2em;
+  gap: 3em;
   justify-content: space-between;
-  width: 100%;
 }
 
 .form-field {
   display: flex;
-  flex-direction: column;
   gap: 0.5em;
   color: #000000;
   font-size: 0.95rem;
-  min-width: 300px;
+  flex: 1;
+}
+
+.form-field label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   max-width: 500px;
-  width: 100%;
 }
 
 .form-field input {
-  border-radius: 10px;
+  border-radius: 7px;
+  margin: 0.25em 1em 0em 0em;
   padding: 0 1em;
   border: 1px solid var(--grey);
-  height: 3em;
-  width: 100%;
+  height: 2.5em;
 }
 
 /* Global Button Styles */
 .settings-page button {
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 0.5em 2.5em;
-    font-size: 1rem;
-  }
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 0.5em 2.5em;
+  font-size: 1rem;
+}
 
 /* Specific Button Styles */
 .settings-buttons {
   display: flex;
   align-self: flex-end;
-  gap: 1em;
+  gap: 0.6em;
   margin-top: 1em;
 }
 
@@ -91,12 +90,33 @@
 /* Appearance Button Styles */
 .appearance-buttons {
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .appearance-buttons button {
   padding: 0.7em 2.5em;
   border-color: var(--green);
   background: var(--green);
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+/* Section Styles 
+.settings-section {
+  margin: 0 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 481px) {
+  .settings-form-contents {
+    flex-direction: column;
+    gap:1em;
+  }
+  .form-field{
+    flex-direction: column;
+  }
 }

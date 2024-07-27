@@ -5,7 +5,7 @@ import "../styles/SettingsPage.css";
  * Represents a users settings component.
  *
  * @component
- * @returns {React.ReactElement} A user settings element.
+ * @returns {React.ReactElement} The SettingsPage component.
  */
 
 const SettingsPage = () => {
@@ -22,10 +22,12 @@ const SettingsPage = () => {
           <h2>Manage Users</h2>
           <p>Manage your account information</p>
           <form className="settings-form-contents">
-            <label className="form-field">
+            <div className="form-field">
+            <label>
               Email
               <input type="text" name="email" aria-label="Email"/>
             </label>
+            </div>
             <div className="settings-buttons">
               <button className="reset-button" type="reset">
                 Reset
@@ -42,13 +44,15 @@ const SettingsPage = () => {
           <h2>Privacy</h2>
           <p>Modify your current password</p>
           <form className="settings-form-contents">
-            <label className="form-field">
+            <div className="form-field">
+            <label>
               Current password
               <input type="password" name="current-password" aria-label="Current password"/>
             </label>
-            <label className="form-field">
+            <label>
               New password <input type="password" name="new-password" aria-label="New password" />
             </label>
+            </div>
             <div className="settings-buttons">
               <button className="reset-button" type="reset">
                 Reset
