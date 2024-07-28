@@ -20,21 +20,29 @@ env = environ.Env(DEBUG=(bool, False))
 BASE_DIR = Path(__file__).resolve().parent.parent
 environ.Env.read_env(BASE_DIR / ".env")
 
+# Env variables
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env("SECRET_KEY")
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env("DEBUG")
+# Email testing
+EMAIL_HOST = env("EMAIL_HOST")
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = env("EMAIL_PORT")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+
 
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000/",
-    "http://127.0.0.1:3000/",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
 ]
 
 # Application definition
@@ -50,7 +58,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
     'rest_framework',
-    'rest_framework_simple_jwt'
+    'rest_framework_simplejwt',
     # local apps
     'users',
 ]
@@ -178,3 +186,9 @@ DJOSER = {
         },
     
 }
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "info@carbon-tracker.com"
+DOMAIN = env("DOMAIN")
+SITE_NAME = "Carbon24"
