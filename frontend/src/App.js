@@ -9,6 +9,7 @@ import Upload from "./components/UploadPage";
 import Modal from "./components/Modal";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
+import ResetPasswordForm from "./components/ResetPasswordForm";
 import useModal from "./hooks/useModal";
 
 const App = () => {
@@ -17,8 +18,10 @@ const App = () => {
   const {
     isRegisterModalOpen,
     isLoginModalOpen,
+    isRePasswordModalOpen,
     openRegisterModal,
     openLoginModal,
+    openRePasswordModal,
     closeModal
   } = useModal();
 
@@ -32,13 +35,17 @@ const App = () => {
         <Route path="/settings" element={<Settings />} />
       </Routes>
 
-      {/* Log in and Register Modals */}
+      {/* Log in, Register, Password Reset Modals */}
       <Modal isOpen={isRegisterModalOpen} onClose={closeModal}>
         <RegisterForm onLoginClick={openLoginModal} />
       </Modal>
 
       <Modal isOpen={isLoginModalOpen} onClose={closeModal}>
-        <LoginForm onSignupClick={openRegisterModal} />
+        <LoginForm onSignupClick={openRegisterModal} onRePasswordClick={openRePasswordModal}/>
+      </Modal>
+
+      <Modal isOpen={isRePasswordModalOpen} onClose={closeModal}>
+        <ResetPasswordForm />
       </Modal>
     </div>
   );

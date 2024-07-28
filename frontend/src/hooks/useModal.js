@@ -18,10 +18,12 @@ const useModal = () => {
     // Boolean check if current modal is set to 'register' or 'login'
     isRegisterModalOpen: currentModal === "register",
     isLoginModalOpen: currentModal === "login",
+    isRePasswordModalOpen: currentModal === "re_password",
 
     // Function calls to manage modals visibility
     openRegisterModal: () => openModal("register"),
     openLoginModal: () => openModal("login"),
+    openRePasswordModal: () => openModal("re_password"),
     closeModal,
   };
 }
