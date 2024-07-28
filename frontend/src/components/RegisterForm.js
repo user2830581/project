@@ -12,6 +12,44 @@ import "../styles/RegisterLoginForm.css";
  */
 
 const RegisterForm = ({ onLoginClick }) => {
+  const [formData, setFormData] = React.useState({
+    email: "",
+    password: "",
+    re_password: "",
+  });
+  const [error, setError] = React.useState(null);
+
+  const { email, password, re_password } = formData;
+
+  /* Input changes */
+  // e stands for event, event handler
+  // call setFormData
+  // use spread operator to copy all properties from current formData state into new object
+  // e.target.name gets name attribute of the input element that triggered the event
+  // e.target.value gets the value of the input element
+
+  const handleChange = (e) => {
+    setFormData((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
+
+  /* Form submission */
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(null);
+
+    // validation
+    if(password !== re_password){
+      setError("Passwords do not match");
+    }
+
+
+  }
+
   return (
     <div className="form-container">
       <h1>Create your account</h1>
@@ -27,22 +65,22 @@ const RegisterForm = ({ onLoginClick }) => {
           <label>
             Email:
             <br />
-            <input type="email" name="email" required />
+            <input type="email" name="email" onChange={handleChange} value={email} required />
           </label>
           <label>
             Password:
             <br />
-            <input type="password" name="password" required />
+            <input type="password" name="password"  onChange={handleChange} value={password} required />
           </label>
           <label>
             Confirm password:
             <br />
-            <input type="password" name="confirm-password" required />
+            <input type="password" name="re_password"  onChange={handleChange} value={re_password} required />
           </label>
         </div>
         {/* Submit button to create account */}
         <div className="submit-button">
-          <button type="submit" value="Submit">
+          <button type="submit" value="Submit" onClick={handleSubmit}>
             Create account
           </button>
         </div>
