@@ -2,8 +2,10 @@
 .form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 1em 3em 1em;
+  padding: 1em 2em 1em;
+  width:fit-content;
 }
 
 /* Form Heading Styles */
@@ -28,11 +30,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding:0 3em;
+  width:100%;
 }
 
 .form-fields {
-  min-width: 500px;
-  width: 100%;
+  width: inherit;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -40,20 +43,18 @@
 }
 
 .form button {
-  margin-top: 1.5em;
-  width: 16em;
-  height: 3em;
+  margin: 1.5em 0 0;
+  padding: 0.7em 3em;
   border-radius: 7px;
   border: none;
   background: var(--green);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .form input {
   font-size: 1rem;
   border-radius: 5px;
   border: 2px solid var(--grey);
-  width: 100%;
+  width: 95%;
   height: 2.3em;
   padding: 0 0.5em 0;
 }
