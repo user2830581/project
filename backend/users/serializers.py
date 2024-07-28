@@ -2,9 +2,9 @@ from django.contrib.auth import get_user_model
 from djoser.serializers import UserCreateSerializer
 
 
-User = get_user_model()
+CustomUser = get_user_model()
 
-class CreateUserSerializer(User):
+class CreateUserSerializer(CustomUser):
     class Meta(UserCreateSerializer.Meta):
-        model = User
+        model = CustomUser
         fields = ['id', 'email', 'password']
