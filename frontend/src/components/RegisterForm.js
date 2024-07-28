@@ -12,6 +12,7 @@ import "../styles/RegisterLoginForm.css";
  */
 
 const RegisterForm = ({ onLoginClick }) => {
+  
   const [formData, setFormData] = React.useState({
     email: "",
     password: "",
@@ -42,13 +43,11 @@ const RegisterForm = ({ onLoginClick }) => {
     e.preventDefault();
     setError(null);
 
-    // validation
-    if(password !== re_password){
+    // Data validation
+    if (password !== re_password) {
       setError("Passwords do not match");
     }
-
-
-  }
+  };
 
   return (
     <div className="form-container">
@@ -65,17 +64,35 @@ const RegisterForm = ({ onLoginClick }) => {
           <label>
             Email:
             <br />
-            <input type="email" name="email" onChange={handleChange} value={email} required />
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={email}
+              required
+            />
           </label>
           <label>
             Password:
             <br />
-            <input type="password" name="password"  onChange={handleChange} value={password} required />
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={password}
+              required
+            />
           </label>
           <label>
             Confirm password:
             <br />
-            <input type="password" name="re_password"  onChange={handleChange} value={re_password} required />
+            <input
+              type="password"
+              name="re_password"
+              onChange={handleChange}
+              value={re_password}
+              required
+            />
           </label>
         </div>
         {/* Submit button to create account */}
